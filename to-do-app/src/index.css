@@ -1,0 +1,88 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container for Input and Button */
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Input Styles */
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 200px; /* Set a fixed width for responsiveness */
+  }
+  
+  input:focus {
+    border-color: #3498db;
+    transform: scale(1.1);
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4e54c8; /* Match button color to the background gradient */
+    color: #fff; /* White text color for better contrast */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #08bc3b; /* Darker blue color on hover */
+    transform: scale(1.05);
+  }
+  
+  /* Typing Animation for Button */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Animation Styles */
+  .button-typing::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 8px;
+    animation: typing 1s infinite alternate;
+  }
+  
+  /* Fade In Animation for Page Load */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  body {
+    animation: fadeIn 1s ease-in-out;
+  }
+  

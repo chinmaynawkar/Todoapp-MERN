@@ -1,0 +1,173 @@
+/* app.css */
+
+/* Global Styles */
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif; 
+  background: linear-gradient(to right bottom, #4e54c8, #8f94fb);
+  margin: 0;
+  padding: 0;
+  color: #555; 
+
+  /* Additional Typography Styles */
+  line-height: 1.6; /* Improved line height for better readability */
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Helvetica', 'Arial', sans-serif; /* Helvetica for headings */
+  color: #fff; 
+}
+
+/* Text Selection Styles */
+::selection {
+  background-color: #3498db; 
+  color: #fff;
+}
+
+/* Links Styles */
+a {
+  color: #3498db; /* Blue color for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2980b9; /* Darker blue color on hover */
+}
+
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+}
+
+
+/* h2 Styles */
+h2 {
+  text-align: center;
+  color: #fff; /* White or another light color for contrast */
+  font-size: calc(1.5em + 1vw);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Add hover effect for more interactivity */
+h2:hover {
+  color: #f0f0f0; /* Lighter color on hover for contrast */
+}
+
+
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  scroll-snap-align: start;
+}
+
+
+.task:hover {
+  animation: scaleUp 0.3s ease-in-out;
+ }
+ 
+ @keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+ }
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+ 
+ 
+
+.icon {
+  margin-right: 15px;
+  font-size: 24px;
+  color: #3498db;
+  cursor: pointer; /* Add a pointer cursor */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.icon:hover {
+  color: #2980b9; /* Darker blue color on hover */
+}
+
+.line_through {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Delete Icon Styles */
+.delete-icon {
+  cursor: pointer;
+  color: #e74c3c;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.delete-icon:hover {
+  color: #e74c3c;
+  transform: scale(1.1); /* Add a subtle scale effect on hover */
+}
+
+
+.create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #3498db;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 600px) {
+  .task {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .task p {
+    margin-top: 10px;
+  }
+
+  .checkbox {
+    margin-bottom: 10px;
+  }
+}
